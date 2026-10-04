@@ -1,0 +1,57 @@
+{
+  "train": [
+    20100104,
+    20191224
+  ],
+  "validation": [
+    20200102,
+    20211224
+  ],
+  "test": [
+    20220104,
+    20251231
+  ],
+  "universes": [
+    "csi300",
+    "csi800"
+  ],
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "baseline_seed": 0,
+  "input_shape": [
+    "N",
+    8,
+    221
+  ],
+  "master_epochs": 40,
+  "continuous_epochs": {
+    "encoder": 4,
+    "ranker": 12,
+    "temporal": 10,
+    "sparse": 10
+  },
+  "k": 1,
+  "k_candidates": [
+    1,
+    2,
+    4,
+    8
+  ],
+  "k_selection": "CSI300 seed0 full CoSTER validation V=(IC+RankIC)/2; same k applied to both universes and all seeds",
+  "continuous_weight": 0.5,
+  "bootstrap": {
+    "block": 20,
+    "replicates": 5000,
+    "seed": 20261001
+  },
+  "cost_bps": [
+    0,
+    5,
+    10,
+    20,
+    30
+  ]
+}

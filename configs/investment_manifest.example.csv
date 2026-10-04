@@ -1,0 +1,4 @@
+universe,model,seed,path
+csi300,MASTER,0,../runs/coster/csi300/seed0/evaluation/MASTER_predictions.npz
+csi300,Continuous,0,../runs/coster/csi300/seed0/evaluation/Continuous_predictions.npz
+csi300,CoSTER,0,../runs/coster/csi300/seed0/evaluation/CoSTER_predictions.npz
