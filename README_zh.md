@@ -12,8 +12,7 @@ MASTER-EXT25将中国A股股票排序评价扩展至2025年。CoSTER将市场引
 - `data_tools/`：数据处理、特征构建与验证。
 - `experiments/`：基线、消融与对照实验。
 - `evaluation/`、`investment/`：预测评价与投资组合分析。
-- `reference/`、`figures/`：实验结果与图表。
-- `paper/`：论文及LaTeX源码。
+- `reference/`：实验结果。
 
 ## 快速开始
 
