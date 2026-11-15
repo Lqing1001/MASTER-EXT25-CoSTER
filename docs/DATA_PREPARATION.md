@@ -1,6 +1,6 @@
 # Data preparation
 
-The paper uses licensed Chinese A-share data from CSMAR. No raw data or security-level arrays are included. The final source-file inventory is provided in `reference/source_files.csv`. Acquire complete source exports and preserve the original workbook names and field headers. The scripts use openpyxl, not OCR.
+The paper uses licensed Chinese A-share data from CSMAR. No raw data or security-level arrays are included. Acquire complete source exports and preserve the original workbook names and field headers. The scripts use openpyxl, not OCR.
 
 ## Inputs
 
@@ -60,3 +60,7 @@ Each annual directory contains `features.npy` (N×221 float32), `labels.npy` (N 
 The final calendar has 3,886 dates. Test predictions span 969 dates, with 964 valid daily-correlation dates; the last five dates have unavailable forward labels. The raw target is adjusted close at t+5 divided by adjusted close at t+1 minus one. Training masks, within-window padding and early-sample feature boundary treatments follow the supplied implementation and manuscript Section 3.2.
 
 `reference/data_audit.json` contains aggregate expected package sizes, fit boundaries and a source-manifest fingerprint. Source licenses, versions, missing instruments and export cutoffs can change reconstructed values. These inputs must be resolved before comparing model results. Workbooks, SQLite files, arrays, generated source inventories and detailed prediction archives remain local and are ignored by Git.
+
+## References
+
+The feature framework follows [Qlib](../REFERENCES.md#yang2020qlib), and the market-guided modeling reference is [MASTER](../REFERENCES.md#li2024master). The source-data providers are distinct from these methodological references.

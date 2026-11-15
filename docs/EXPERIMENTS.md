@@ -1,56 +1,36 @@
-# Model and prediction experiments
+# Experiments
 
-Run commands from the repository root. Paths below are relative to that root. All numerical training entry points use one CPU numerical thread and serial daily cross-sections.
+## Aggregate results
 
-## Checkpoint inference
+Run `python scripts/reproduce_results.py`. It uses 964 evaluation dates, ten matched seeds, Bartlett Newey–West lag 10, and 5,000 noncircular 20-day bootstrap blocks with seed 20261110. The supplied mean daily correlations are aggregate model outputs, not security-level scores. Wealth is compounded within each seed before averaging. Bands show the minimum–maximum seed range. Cost error bars use sample SD.
 
-Extract `CoSTER_final_checkpoints.zip` into the repository. It contains both universes, seeds 0/1/2, and four state dictionaries per run. The manifest provides SHA-256 digests. The file names are the load API's storage names; the public model is CoSTER.
+## Model training
 
-```bash
-python -m evaluation.predict --dataset-root datasets/master_ext_strict_20191224_v1 --run-dir checkpoints/csi300/seed0 --universe csi300 --seed 0 --split test --output-dir runs/predictions/csi300/seed0 --device cuda
-```
-
-This writes complete-universe MASTER, Continuous and CoSTER predictions, daily IC/RankIC, and period summaries. Repeat for both universes and seeds 0/1/2. Inference must precede finite-label filtering: every stock in a daily universe participates in attention and score standardization.
-
-## Training
+Follow `docs/DATA_PREPARATION.md` for source layouts. Train/normalization: 2010-01-04–2019-12-24; validation: 2020-01-02–2021-12-24; test: 2022-01-04–2025-12-31. Inputs are eight daily observations with 221 features. The target holds from t+1 close to t+5 close (four intervals).
 
 ```bash
-python -m experiments.train --dataset-root datasets/master_ext_strict_20191224_v1 --checkpoint-root checkpoints --output-root runs/coster --include-baselines
+python -m experiments.train --dataset-root datasets/master_ext_strict_20191224_v1 --output-root runs/new_training --seeds 0 1 2 3 4 5 6 7 8 9 --dry-run
 ```
 
-`--checkpoint-root` reuses the frozen four-epoch encoder embedded in each released ranker checkpoint. All ranker/residual parameters are initialized and trained by the final algorithm. Omit the option to train the encoder from scratch as well; optimization randomness and GPU kernels can then yield different numerical checkpoints.
+Remove `--dry-run` to train. This is a fresh experiment; exact historical numerical reproduction additionally requires the stored checkpoints and original staged initialization. It is not claimed that a new training run will produce bit-identical results. The original study reused existing seeds 0–2 and trained seeds 3–9 under `experiments/controls/train.py new_main`.
 
-Individual commands for one run:
+## Controlled experiments
+
+The optional checkpoint folder contains `csi300/seed0/master.pt`, `base.pt`, `dense.pt`, `full.pt`, and the analogous files for all ten seeds and both universes. Set `COSTER_CHECKPOINT_ROOT` to that folder to use the exact main-model anchors. `MASTER_EXT_DATASET_ROOT` selects prepared data; `COSTER_EXPERIMENT_ROOT` selects a separate writable experiment output; `COSTER_DEVICE` defaults to `cuda:0`.
 
 ```bash
-python CoSTER.py train-master --dataset-root datasets/master_ext_strict_20191224_v1 --universe csi300 --seed 0 --output-dir runs/coster/csi300/seed0/master
-python CoSTER.py train-continuous --dataset-root datasets/master_ext_strict_20191224_v1 --universe csi300 --seed 0 --encoder-checkpoint checkpoints/csi300/seed0/continuous_prism/no_vq_csi300_seed0_base_best.pt --output-dir runs/coster/csi300/seed0/continuous_prism
-python CoSTER.py train-sparse --dataset-root datasets/master_ext_strict_20191224_v1 --universe csi300 --seed 0 --selected 1 --continuous-dir runs/coster/csi300/seed0/continuous_prism --output-dir runs/coster/csi300/seed0/sparse_top1
+python experiments/controls/train.py ablation --universe csi300 --seed 0
+python experiments/controls/train.py selector --universe csi300 --seed 0 --mode top2
+python experiments/controls/analyze.py
+python experiments/controls/membership.py
 ```
 
-Budgets: MASTER 40 epochs; continuous encoder/ranker/temporal/sparse stages 4/12/10/10 epochs. Stage checkpoint selection uses the relevant branch's validation V. The selected full-model sparsity is k=1, with equal standardized score weights. `--help` lists each stage's parameters.
+These commands require the licensed prepared arrays and all preceding cached predictions for the intended comparison. `analyze.py` discovers available predictions: only label a run ten-seed after verifying all seeds 0–9 are present. Do not set `COSTER_CHECKPOINT_ROOT` when training new main models: it is an input-anchor override.
 
-## Validation sensitivity
+`ensembles.py` retains the recorded baseline directory conventions for the deterministic Ridge and seed-0 GRU; those private files are not bundled. Its additional baseline training dependency is included. The exact historical experiment scripts are supplied for traceability, not advertised as a data-free one-command training pipeline.
 
-```bash
-python -m evaluation.sensitivity --dataset-root datasets/master_ext_strict_20191224_v1 --run-dir checkpoints/csi300/seed0 --output-dir runs/sensitivity --device cuda
-```
+Portfolio recalculation additionally requires `COSTER_PRICE_DB` (the prepared SQLite database), `COSTER_FACTOR_FILE` (CH-3 workbook), and verified total-return benchmark inputs under the experiment output's `data_audit/`. Generate those inputs with `audit_total_return_data.py` from licensed CSMAR workbooks. Then use `portfolio.py`; it evaluates freeze/cash and replacement rules. Borrow inventory, price-limit execution, impact, capacity and financing are not modeled.
 
-Table 7: fix the final temporal anchor and train sparse residuals with k=2/4/8 for 10 epochs, with matched seed-0 initialization; reuse the final k=1 residual. Compare the resulting full CoSTER validation V. The weight scan uses the fixed k=1 expert and alpha=0/0.25/0.5/0.75/1, where alpha is the continuous score weight. This command never evaluates the test split.
+## Manuscript
 
-## Paired inference
-
-```bash
-python -m evaluation.paired --candidate runs/predictions/csi300/seed0/CoSTER_daily.csv runs/predictions/csi300/seed1/CoSTER_daily.csv runs/predictions/csi300/seed2/CoSTER_daily.csv --baseline runs/predictions/csi300/seed0/MASTER_daily.csv runs/predictions/csi300/seed1/MASTER_daily.csv runs/predictions/csi300/seed2/MASTER_daily.csv --output-dir runs/paired/csi300
-```
-
-Input files must have identical stock-universe definitions and correspond to the same seeds in the same order. The tool verifies matching dates. For each metric, paired daily differences are averaged across seeds before Newey–West inference (lag 10) and the non-circular moving-block bootstrap (block 20, 5000 replicates, seed 20261001). Confidence intervals are percentile intervals for the mean daily difference.
-
-## Additional final analyses
-
-```bash
-python -m evaluation.model_cost
-python -m evaluation.membership --raw-features datasets/master_ext_clean_v1/alpha158_raw/by_instrument --predictions runs/predictions/csi300/seed0/MASTER_predictions.npz runs/predictions/csi300/seed0/CoSTER_predictions.npz --output runs/membership.json
-```
-
-Matrix-operation counting uses two FLOPs per multiply-accumulate and excludes normalization, activation, sorting and score combination. Membership sensitivity filters the fixed predictions at scoring time; it does not rerun a changed attention universe. The final reference values are in `reference/`.
+`paper/manuscript_v2.pdf` contains the manuscript; `paper/source/` contains its LaTeX sources. Compile `template.tex` using pdflatex and BibTeX.

@@ -1,25 +1,9 @@
-# Investment experiments
+# Investment evaluation
 
-The input is a CSV manifest with `universe,model,seed,path`. Paths are relative to the manifest file, or absolute local paths. Each NPZ must contain `dates,instruments,labels,predictions`. Start from `configs/investment_manifest.example.csv` and list MASTER, Continuous and CoSTER for both universes and all seeds.
+Portfolio evaluation uses four overlapping cohorts, entry at t+1 close and exit at t+5 close. The scenarios include long-only and theoretical long–short decile portfolios, one-way costs of 0/5/10/20/30 bp, and freeze/cash or replacement entry rules. Long-only active returns use total-return indices H00300 and H00906.
 
-```bash
-python -m investment.run --manifest configs/investment_manifest.example.csv --database datasets/master_ext_clean_v1/intermediate/master_ext_clean.sqlite --output-dir runs/investment
-```
+Aggregate results are in `reference/portfolio/`. To reproduce the figures from these results, run `python scripts/reproduce_results.py`.
 
-For CH-3 attribution, add `--factors PATH_TO_CH3.xlsx` (CSV also supported). Required fields: integer `date` in YYYYMMDD and decimal-return `mktrf,SMB,VMG`. Factors should cover every return date. The final study used the CH-3 workbook `CH3_factors_daily_202608.xlsx` from the Mingshi database (https://www.mingshiim.com/database). Obtain the source workbook separately.
+For portfolio recomputation from individual-stock scores, use `experiments/controls/portfolio.py`. Set `COSTER_EXPERIMENT_ROOT` to the prediction/output directory, `COSTER_PRICE_DB` to the prepared SQLite database, and `COSTER_FACTOR_FILE` to the CH-3 factor workbook. The factor fields are `date`, `mktrf`, `SMB` and `VMG`; returns use decimal units. Total-return benchmark inputs belong in the experiment directory's `data_audit/` folder and can be prepared using `experiments/controls/audit_total_return_data.py`.
 
-## Accounting convention
-
-- Signals use the complete prediction universe at date t. Rank endpoints contain floor(10% × N) securities each.
-- Enter at the next close and hold through t+5, using four overlapping cohorts. Each cohort receives one-quarter of the strategy allocation.
-- Long–short exposure is +0.5 on the top decile and −0.5 on the bottom decile at full allocation. This is a theoretical spread portfolio; no stock-borrow availability/cost model is included.
-- Long-only exposure uses the top decile, reserves frozen positions first, and caps liquid purchases at the remaining capital.
-- Missing/zero-volume/zero-amount days block trading. Existing positions use carried-forward marked prices; failed entries stay in cash and are not reranked using next-day information.
-- One-way turnover = half of the absolute drift-adjusted weight change. Cost = quoted one-way basis points × full absolute weight change. Net returns are gross daily P&L minus these costs.
-- The final test price window is 2022–2025. A new cohort is opened only when its full holding horizon remains in the window. The kernel reproduces the paper's fixed weight-based accounting; it is not an order-book execution simulator.
-
-## Outputs
-
-`per_seed.csv` reports CAGR, Sharpe, maximum drawdown and turnover at 0/5/10/20/30 bps. Long-only rows also include benchmark CAGR, annual mean active return and information ratio. `summary.csv` reports mean and sample standard deviation across seeds. `daily.csv` contains strategy-level daily returns; `audit.json` checks prices against the original forward-return labels and reports blocked trades.
-
-When factors are supplied, `factor_regressions.csv` reports seed-average long–short CH-3 regressions and same-seed CoSTER-minus-MASTER incremental alpha at 0 and 10 bps. HAC uses Bartlett lag 10, the n/(n−k) correction and asymptotic normal p-values; alpha is annualized by 252. The spread-P&L convention does not subtract a full unit of risk-free return. Inference averages paired runs by date before regression.
+The input prices, stock-level predictions and factor workbooks must be obtained or generated separately. Short-borrow availability, financing, price-limit execution, market impact and capacity are outside the simulation.
