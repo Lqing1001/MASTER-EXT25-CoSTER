@@ -1,0 +1,16 @@
+{
+  "python": "3.12.11",
+  "packages": {
+    "numpy": "2.1.2",
+    "pandas": "2.3.3",
+    "scipy": "1.16.2",
+    "scikit-learn": "1.7.2",
+    "xgboost": "3.2.0",
+    "torch": "2.8.0+cu129",
+    "openpyxl": "3.1.5",
+    "joblib": "1.5.2",
+    "threadpoolctl": "3.6.0"
+  },
+  "paper_gpu": "NVIDIA RTX 5090 32 GB",
+  "paper_cuda": "12.9"
+}

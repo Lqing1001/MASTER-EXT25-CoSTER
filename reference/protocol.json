@@ -1,0 +1,102 @@
+{
+  "training_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "universes": [
+    "csi300",
+    "csi800"
+  ],
+  "primary_seed_count": 10,
+  "initial_existing_seed_count": 3,
+  "variants": [
+    "B",
+    "B+D",
+    "B+S",
+    "B+D+S"
+  ],
+  "selection_controls": [
+    "last",
+    "fixed_random",
+    "top2",
+    "softmax"
+  ],
+  "selection": "branch validation mean IC and RankIC; test never used for checkpoint selection",
+  "epochs": {
+    "encoder": 4,
+    "base": 12,
+    "dense": 10,
+    "sparse": 10,
+    "master": 40
+  },
+  "lr": {
+    "continuous": 0.0001,
+    "master": 1e-05
+  },
+  "weight_decay": 0.0001,
+  "score_weight": 0.5,
+  "nw_lags": [
+    5,
+    10,
+    20
+  ],
+  "bootstrap_blocks": [
+    10,
+    20,
+    40
+  ],
+  "bootstrap_draws": 5000,
+  "primary_family": "2 universes x IC/RankIC; Holm within each lag; lag10 primary",
+  "seed_ensemble_pairs": [
+    [
+      0,
+      1
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      6,
+      7
+    ],
+    [
+      8,
+      9
+    ]
+  ],
+  "random_routing": "fixed seed/date/security integer hash modulo 8, independent of outcomes",
+  "stage_order": [
+    "ablation_existing_seeds",
+    "selector_controls_existing_seeds",
+    "ensembles_existing_seeds",
+    "expand_seeds_3_to_9",
+    "statistics",
+    "portfolio",
+    "membership"
+  ],
+  "paper_modifications": false,
+  "code_hashes": {
+    "analyze.py": "353c3ba4b034cab5239ea4c572a929187b116c2eb8ee48087dc20057be9dc0f0",
+    "common.py": "446b643f32e4afea4e7f66b25752067af1a2ce6183c33f233917b183d8849723",
+    "ensembles.py": "17c55cff7e5f69f016bd77cac751c02d67e9ff05149e53107cbf692dfa5134af",
+    "membership.py": "e338429b255f0f1e6a73b341f0a9f5ac299a38008455e1f1f77043086d2a8b70",
+    "portfolio.py": "8d14e20466b5860f9445e07e9bb3cf9f1514a4b23dec2b514dcc23a0fb495cfd",
+    "preflight.py": "e4c03dc94abf52dfdf39845244560a06d1bda0b183e5398536818548066a2993",
+    "report.py": "ed33d2defc6606d91c43255b87be25c96fe5984cbb98827481f30efab3f8dea2",
+    "run_queue.py": "b10fb88d83619ccf3583ea7169be8610b563ad21623261e84f25c1537a51d566",
+    "train.py": "cc2a13f647e76473897e7c9c5a6d6e19cddbf30d067e513011f56262bf664286"
+  }
+}

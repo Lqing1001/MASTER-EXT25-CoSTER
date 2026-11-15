@@ -1,0 +1,642 @@
+[
+  {
+    "universe": "csi300",
+    "seed": 0,
+    "component": "master",
+    "file": "checkpoints/csi300/seed0/master.pt",
+    "bytes": 3214817,
+    "sha256": "9a3c3807f68ba5946c7657615f210bf32cb88119d7ad27fe4844555292b8de8b"
+  },
+  {
+    "universe": "csi300",
+    "seed": 0,
+    "component": "base",
+    "file": "checkpoints/csi300/seed0/base.pt",
+    "bytes": 1419844,
+    "sha256": "53378ff850b2e8229e80bb0823ff717d08649b0bdf1786cedde799496bb6a427"
+  },
+  {
+    "universe": "csi300",
+    "seed": 0,
+    "component": "dense",
+    "file": "checkpoints/csi300/seed0/dense.pt",
+    "bytes": 1577917,
+    "sha256": "b40efc19feea1ac417a589903031dbeacd2206d451ee5fd6800060e7e5f30b33"
+  },
+  {
+    "universe": "csi300",
+    "seed": 0,
+    "component": "full",
+    "file": "checkpoints/csi300/seed0/full.pt",
+    "bytes": 1646331,
+    "sha256": "c15afbe1aa24fc33947a69f9b7d7d95c3d7742d68ae8ce1d49a585556c7f569c"
+  },
+  {
+    "universe": "csi300",
+    "seed": 1,
+    "component": "master",
+    "file": "checkpoints/csi300/seed1/master.pt",
+    "bytes": 3214817,
+    "sha256": "89279c2484c9a2fbcc9380f0de3ea21f3ce1b032b2ffd8da1db564afbb958821"
+  },
+  {
+    "universe": "csi300",
+    "seed": 1,
+    "component": "base",
+    "file": "checkpoints/csi300/seed1/base.pt",
+    "bytes": 1419844,
+    "sha256": "875171529da82ea454cc989c9d403155599409433a6ed7bb6986e48684dcb6de"
+  },
+  {
+    "universe": "csi300",
+    "seed": 1,
+    "component": "dense",
+    "file": "checkpoints/csi300/seed1/dense.pt",
+    "bytes": 1577917,
+    "sha256": "865a73b6a72df7d5d32112d5e5307bbd495f963b0a7b8087d43f5127744726e7"
+  },
+  {
+    "universe": "csi300",
+    "seed": 1,
+    "component": "full",
+    "file": "checkpoints/csi300/seed1/full.pt",
+    "bytes": 1646331,
+    "sha256": "8b9867ac3f6942756f8f66dbaf4296bc8336b4770d2f9e21450cba6ab89cae07"
+  },
+  {
+    "universe": "csi300",
+    "seed": 2,
+    "component": "master",
+    "file": "checkpoints/csi300/seed2/master.pt",
+    "bytes": 3214817,
+    "sha256": "700d05839ee61a519dbae6739c9cd3e4d07e179504ca5e19a2f5c961f4d34123"
+  },
+  {
+    "universe": "csi300",
+    "seed": 2,
+    "component": "base",
+    "file": "checkpoints/csi300/seed2/base.pt",
+    "bytes": 1419844,
+    "sha256": "a350ee732890bf6724f91146ebf5339c55d3abb9636897518804b7ef92adb7ab"
+  },
+  {
+    "universe": "csi300",
+    "seed": 2,
+    "component": "dense",
+    "file": "checkpoints/csi300/seed2/dense.pt",
+    "bytes": 1577917,
+    "sha256": "8f1a449255e4b4303ab85af9893ff4ee42c22a25eebbc5e6720178ae6cff7218"
+  },
+  {
+    "universe": "csi300",
+    "seed": 2,
+    "component": "full",
+    "file": "checkpoints/csi300/seed2/full.pt",
+    "bytes": 1646331,
+    "sha256": "4275870b63271f8906b1465730a17284d317a8f4b3bcfa34823b6708517fe61c"
+  },
+  {
+    "universe": "csi300",
+    "seed": 3,
+    "component": "master",
+    "file": "checkpoints/csi300/seed3/master.pt",
+    "bytes": 3214817,
+    "sha256": "9aeac04675b32d1d2972d3cf5374641d2ee6926e9cc35176b280d16bc9fbf3ea"
+  },
+  {
+    "universe": "csi300",
+    "seed": 3,
+    "component": "base",
+    "file": "checkpoints/csi300/seed3/base.pt",
+    "bytes": 1414939,
+    "sha256": "672f82f01c97cf26b79cfd0ccccc353cbc23ae52d598596ee95dea3f7586ad03"
+  },
+  {
+    "universe": "csi300",
+    "seed": 3,
+    "component": "dense",
+    "file": "checkpoints/csi300/seed3/dense.pt",
+    "bytes": 1571549,
+    "sha256": "9b80288cd0cc512c90f1cc218df5050df84425f9afd34304a35b0245e956208a"
+  },
+  {
+    "universe": "csi300",
+    "seed": 3,
+    "component": "full",
+    "file": "checkpoints/csi300/seed3/full.pt",
+    "bytes": 1646215,
+    "sha256": "b61c6d265b9bc75b211b9df4d64cfad00bf28c3611d1c82a96d45c92900571c0"
+  },
+  {
+    "universe": "csi300",
+    "seed": 4,
+    "component": "master",
+    "file": "checkpoints/csi300/seed4/master.pt",
+    "bytes": 3214817,
+    "sha256": "e74ee1f1565f479d24885d4b754fd02d843e896d74dbc87267f50695d8762588"
+  },
+  {
+    "universe": "csi300",
+    "seed": 4,
+    "component": "base",
+    "file": "checkpoints/csi300/seed4/base.pt",
+    "bytes": 1414939,
+    "sha256": "2b943552cbca0d73ea8139ba884f5f6969a51c2e0490ac132b8efddc03cb7bd0"
+  },
+  {
+    "universe": "csi300",
+    "seed": 4,
+    "component": "dense",
+    "file": "checkpoints/csi300/seed4/dense.pt",
+    "bytes": 1571549,
+    "sha256": "e106097a214e0eae291c4624df414596a7fe56571c2fd672d0cfb6096d05c1b2"
+  },
+  {
+    "universe": "csi300",
+    "seed": 4,
+    "component": "full",
+    "file": "checkpoints/csi300/seed4/full.pt",
+    "bytes": 1646215,
+    "sha256": "ac60b6a2404dbb6461aa23231c0a03640f0cbb2547464c0375f442a2d6d10c3a"
+  },
+  {
+    "universe": "csi300",
+    "seed": 5,
+    "component": "master",
+    "file": "checkpoints/csi300/seed5/master.pt",
+    "bytes": 3214817,
+    "sha256": "379ce1c726f8b5461ca8a58675c30acbc7740545ea3f4a49731e805a415b4d34"
+  },
+  {
+    "universe": "csi300",
+    "seed": 5,
+    "component": "base",
+    "file": "checkpoints/csi300/seed5/base.pt",
+    "bytes": 1414939,
+    "sha256": "a6e6893aed830ba89b91864632d613bcea443fd37020d97930110ca45e501fb1"
+  },
+  {
+    "universe": "csi300",
+    "seed": 5,
+    "component": "dense",
+    "file": "checkpoints/csi300/seed5/dense.pt",
+    "bytes": 1571549,
+    "sha256": "4de0daf7f19c76eb14e50787e39223a8e37ede9c3a33097d0576ae676ee23eae"
+  },
+  {
+    "universe": "csi300",
+    "seed": 5,
+    "component": "full",
+    "file": "checkpoints/csi300/seed5/full.pt",
+    "bytes": 1646215,
+    "sha256": "4639128e667734c9d4313db9cf9f8bc8f3f9d0c6a60c3ca8dc1e3f02aa0ea11f"
+  },
+  {
+    "universe": "csi300",
+    "seed": 6,
+    "component": "master",
+    "file": "checkpoints/csi300/seed6/master.pt",
+    "bytes": 3214817,
+    "sha256": "fbc77a47bfa3a9f679a5d933d5d7316ddb9e6827596b5068b712d6f5573c87a7"
+  },
+  {
+    "universe": "csi300",
+    "seed": 6,
+    "component": "base",
+    "file": "checkpoints/csi300/seed6/base.pt",
+    "bytes": 1414939,
+    "sha256": "0805e950f236110dd4926132c801a95b986283e0f55ca612b5a10b57628c1f39"
+  },
+  {
+    "universe": "csi300",
+    "seed": 6,
+    "component": "dense",
+    "file": "checkpoints/csi300/seed6/dense.pt",
+    "bytes": 1571549,
+    "sha256": "48213d8de8363d2207edf9dc16bbade239c094e41472120b5d3ee38cdee798f0"
+  },
+  {
+    "universe": "csi300",
+    "seed": 6,
+    "component": "full",
+    "file": "checkpoints/csi300/seed6/full.pt",
+    "bytes": 1646215,
+    "sha256": "680c1ebb93ba4b7621ec3eb943e5780354c81202889f0e3e16c6421db006fd96"
+  },
+  {
+    "universe": "csi300",
+    "seed": 7,
+    "component": "master",
+    "file": "checkpoints/csi300/seed7/master.pt",
+    "bytes": 3214817,
+    "sha256": "c3603c9dd66251256ad5e2928fed59c7d42796c1c96e969104be70ca3cd59a90"
+  },
+  {
+    "universe": "csi300",
+    "seed": 7,
+    "component": "base",
+    "file": "checkpoints/csi300/seed7/base.pt",
+    "bytes": 1414939,
+    "sha256": "3df3a568c7149620df8cf0610e52d8180cc963cecebbd9c2cd989609831020de"
+  },
+  {
+    "universe": "csi300",
+    "seed": 7,
+    "component": "dense",
+    "file": "checkpoints/csi300/seed7/dense.pt",
+    "bytes": 1571549,
+    "sha256": "58e437d3175046d69476b33b240338272ab1ef8b269a56bd8d7b8161a2ed66a1"
+  },
+  {
+    "universe": "csi300",
+    "seed": 7,
+    "component": "full",
+    "file": "checkpoints/csi300/seed7/full.pt",
+    "bytes": 1646215,
+    "sha256": "0adcec36ac8a6cf23e9a86472e39148687d92fc8377b468e4aeecf9f723fa40c"
+  },
+  {
+    "universe": "csi300",
+    "seed": 8,
+    "component": "master",
+    "file": "checkpoints/csi300/seed8/master.pt",
+    "bytes": 3214817,
+    "sha256": "e525494fe5635bd114335217ae3ad384fe6faee4606b9cef94f4f456da755cf8"
+  },
+  {
+    "universe": "csi300",
+    "seed": 8,
+    "component": "base",
+    "file": "checkpoints/csi300/seed8/base.pt",
+    "bytes": 1414939,
+    "sha256": "f91563fe3c5fa9ccbd84bf568540b4e6328d376530e7fa34fc0ea8f3ead9bca1"
+  },
+  {
+    "universe": "csi300",
+    "seed": 8,
+    "component": "dense",
+    "file": "checkpoints/csi300/seed8/dense.pt",
+    "bytes": 1571549,
+    "sha256": "fceaf68412c8fff5a98deedeb92964e319e5a85c8646f8200dd3a242f2edb736"
+  },
+  {
+    "universe": "csi300",
+    "seed": 8,
+    "component": "full",
+    "file": "checkpoints/csi300/seed8/full.pt",
+    "bytes": 1646215,
+    "sha256": "129575d876284341cc184c8195665c8bdba6842fe9bf2e5b0da7dbf0b8cd4c13"
+  },
+  {
+    "universe": "csi300",
+    "seed": 9,
+    "component": "master",
+    "file": "checkpoints/csi300/seed9/master.pt",
+    "bytes": 3214817,
+    "sha256": "e4b0fb5e6a2ed971efa00e32ccc7dd4e2cc05abc9eda1da4d18501a4b480e159"
+  },
+  {
+    "universe": "csi300",
+    "seed": 9,
+    "component": "base",
+    "file": "checkpoints/csi300/seed9/base.pt",
+    "bytes": 1414939,
+    "sha256": "f940f4017dcbd3a34d177abc213a2d1f07e48fe7d0ca15e6f59644dbbf97dc22"
+  },
+  {
+    "universe": "csi300",
+    "seed": 9,
+    "component": "dense",
+    "file": "checkpoints/csi300/seed9/dense.pt",
+    "bytes": 1571549,
+    "sha256": "61904e4500939259665d47a861e16e35c7b831a5ff1dec51b9794b63fdf5f5f3"
+  },
+  {
+    "universe": "csi300",
+    "seed": 9,
+    "component": "full",
+    "file": "checkpoints/csi300/seed9/full.pt",
+    "bytes": 1646215,
+    "sha256": "c5f346bb34cd2e0bf7768c0234e9db40538bb593cc0fd2c04c41a9cfb7401aa7"
+  },
+  {
+    "universe": "csi800",
+    "seed": 0,
+    "component": "master",
+    "file": "checkpoints/csi800/seed0/master.pt",
+    "bytes": 3214817,
+    "sha256": "08f56cab0f82a3b944c292517ae03c8918cf71eeb81f3e87ca73ac192ab78da1"
+  },
+  {
+    "universe": "csi800",
+    "seed": 0,
+    "component": "base",
+    "file": "checkpoints/csi800/seed0/base.pt",
+    "bytes": 1419844,
+    "sha256": "83762dc16366ab580de2152f3e2a4fff157addcbb2ab5194018cc83a022fb92d"
+  },
+  {
+    "universe": "csi800",
+    "seed": 0,
+    "component": "dense",
+    "file": "checkpoints/csi800/seed0/dense.pt",
+    "bytes": 1577917,
+    "sha256": "a88be1edfab5788dd4f910042dcbafcde7be0dc82278125f82e0472595f3228f"
+  },
+  {
+    "universe": "csi800",
+    "seed": 0,
+    "component": "full",
+    "file": "checkpoints/csi800/seed0/full.pt",
+    "bytes": 1646331,
+    "sha256": "e14c86519b0dca83aa4c6178c74d9638002b7790778c99ace907fac6ef7f6c72"
+  },
+  {
+    "universe": "csi800",
+    "seed": 1,
+    "component": "master",
+    "file": "checkpoints/csi800/seed1/master.pt",
+    "bytes": 3214817,
+    "sha256": "88f25ba2b8fdeaa8987b8e32725023a7ed892eee8ff59d08bb694bc31e3a4ee5"
+  },
+  {
+    "universe": "csi800",
+    "seed": 1,
+    "component": "base",
+    "file": "checkpoints/csi800/seed1/base.pt",
+    "bytes": 1419844,
+    "sha256": "50d174ef1413d89fe333653b44d6e2ac408a7e353b1a843304e65972bec20860"
+  },
+  {
+    "universe": "csi800",
+    "seed": 1,
+    "component": "dense",
+    "file": "checkpoints/csi800/seed1/dense.pt",
+    "bytes": 1577917,
+    "sha256": "be369b99c1f8df0403e82f3eea188fc5c01822cda2b9ce98b186e87252a6b346"
+  },
+  {
+    "universe": "csi800",
+    "seed": 1,
+    "component": "full",
+    "file": "checkpoints/csi800/seed1/full.pt",
+    "bytes": 1646331,
+    "sha256": "72422853457d0c5a6ad784b39c3f681b1b8b128fc9f909afed3c9e8c13fe71f7"
+  },
+  {
+    "universe": "csi800",
+    "seed": 2,
+    "component": "master",
+    "file": "checkpoints/csi800/seed2/master.pt",
+    "bytes": 3214817,
+    "sha256": "b1f3785a57d859d6906257e24c2c82fdfc43e2f3a7b9072a26114f2e88874c9f"
+  },
+  {
+    "universe": "csi800",
+    "seed": 2,
+    "component": "base",
+    "file": "checkpoints/csi800/seed2/base.pt",
+    "bytes": 1419844,
+    "sha256": "33c4ba2255da5f8ebe162e5fe2aad76d1b2629ba74ee2031026d704c52afb4ea"
+  },
+  {
+    "universe": "csi800",
+    "seed": 2,
+    "component": "dense",
+    "file": "checkpoints/csi800/seed2/dense.pt",
+    "bytes": 1577917,
+    "sha256": "68e42877f929bd3a1de6d7cc6a0e97b131eb32f751e0a87b681c42be3a7c19e9"
+  },
+  {
+    "universe": "csi800",
+    "seed": 2,
+    "component": "full",
+    "file": "checkpoints/csi800/seed2/full.pt",
+    "bytes": 1646331,
+    "sha256": "024b27128bfef78e5610a0038ea574ae606ad9d0bc9f64c6aa974f2f5f49c0f7"
+  },
+  {
+    "universe": "csi800",
+    "seed": 3,
+    "component": "master",
+    "file": "checkpoints/csi800/seed3/master.pt",
+    "bytes": 3214817,
+    "sha256": "bb249986f4a22bcbc521c3eef4cad58f763cc27da27a17514d285a5b5b5a097c"
+  },
+  {
+    "universe": "csi800",
+    "seed": 3,
+    "component": "base",
+    "file": "checkpoints/csi800/seed3/base.pt",
+    "bytes": 1414939,
+    "sha256": "ef2e71796866cb2e105de0ff4f3b5503abade7c83ec255787b6e9f8017f52e6d"
+  },
+  {
+    "universe": "csi800",
+    "seed": 3,
+    "component": "dense",
+    "file": "checkpoints/csi800/seed3/dense.pt",
+    "bytes": 1571549,
+    "sha256": "1a4c8e2890fd055dd375e5f797bc404a5eb990fe4e3e824d28ca89fba04a5672"
+  },
+  {
+    "universe": "csi800",
+    "seed": 3,
+    "component": "full",
+    "file": "checkpoints/csi800/seed3/full.pt",
+    "bytes": 1646215,
+    "sha256": "a8a728ecc1758455743673aaabc6bb72f83ab158be9a0d8fb1fb1dbe15501e50"
+  },
+  {
+    "universe": "csi800",
+    "seed": 4,
+    "component": "master",
+    "file": "checkpoints/csi800/seed4/master.pt",
+    "bytes": 3214817,
+    "sha256": "02c684d820fba6f1701dbe685e18d9adc9dcecf71cc233617f62bf9c03fbe024"
+  },
+  {
+    "universe": "csi800",
+    "seed": 4,
+    "component": "base",
+    "file": "checkpoints/csi800/seed4/base.pt",
+    "bytes": 1414939,
+    "sha256": "c0994bac94f911a2d22dec7db4fe5c609bc190b44899500737069db3e7432f62"
+  },
+  {
+    "universe": "csi800",
+    "seed": 4,
+    "component": "dense",
+    "file": "checkpoints/csi800/seed4/dense.pt",
+    "bytes": 1571549,
+    "sha256": "d364689d3baae3496d1dc6e11681cfec2c29c1ac833e7584b7f6b6192b69bddd"
+  },
+  {
+    "universe": "csi800",
+    "seed": 4,
+    "component": "full",
+    "file": "checkpoints/csi800/seed4/full.pt",
+    "bytes": 1646215,
+    "sha256": "0d8d70835551a37f0427fef7271ffed338b08f4a81fd4431de8c49c0f51ce51f"
+  },
+  {
+    "universe": "csi800",
+    "seed": 5,
+    "component": "master",
+    "file": "checkpoints/csi800/seed5/master.pt",
+    "bytes": 3214817,
+    "sha256": "e742683f510f832d1ff1e7ad3919ed7576abcd414a9c6969f6740e123c55f23f"
+  },
+  {
+    "universe": "csi800",
+    "seed": 5,
+    "component": "base",
+    "file": "checkpoints/csi800/seed5/base.pt",
+    "bytes": 1414939,
+    "sha256": "782c4bb6943ead1a0918b4161a8b2f709f116a3317595a42c04fab3fec0bc4cc"
+  },
+  {
+    "universe": "csi800",
+    "seed": 5,
+    "component": "dense",
+    "file": "checkpoints/csi800/seed5/dense.pt",
+    "bytes": 1571549,
+    "sha256": "277e3ad14768acd74804681318b3b40ae661e65380b765eb13f80d6f961d1fe5"
+  },
+  {
+    "universe": "csi800",
+    "seed": 5,
+    "component": "full",
+    "file": "checkpoints/csi800/seed5/full.pt",
+    "bytes": 1646215,
+    "sha256": "212f2712b72c5df7445271f09c66e1b3da207739da42dfddefc52c84212dba4c"
+  },
+  {
+    "universe": "csi800",
+    "seed": 6,
+    "component": "master",
+    "file": "checkpoints/csi800/seed6/master.pt",
+    "bytes": 3214817,
+    "sha256": "b584578fa9535ef4e173f17dfb435259d4daefd1debd686d4b10f56fe632de7a"
+  },
+  {
+    "universe": "csi800",
+    "seed": 6,
+    "component": "base",
+    "file": "checkpoints/csi800/seed6/base.pt",
+    "bytes": 1414939,
+    "sha256": "2f83fc4bfb4b083018495b7f739a79083b9c1abaea29cc260d47ae3c4c075ae7"
+  },
+  {
+    "universe": "csi800",
+    "seed": 6,
+    "component": "dense",
+    "file": "checkpoints/csi800/seed6/dense.pt",
+    "bytes": 1571549,
+    "sha256": "cdf524eb2f59bc76436adab71beaac3c7be1a10c67ca5944e0c6233ab5daab8a"
+  },
+  {
+    "universe": "csi800",
+    "seed": 6,
+    "component": "full",
+    "file": "checkpoints/csi800/seed6/full.pt",
+    "bytes": 1646215,
+    "sha256": "14ba59c303599e4b25487531b8958c59a145794c7c27642a39b19eaac0578a5e"
+  },
+  {
+    "universe": "csi800",
+    "seed": 7,
+    "component": "master",
+    "file": "checkpoints/csi800/seed7/master.pt",
+    "bytes": 3214817,
+    "sha256": "ac020e38bd60b94e69d9f6cf6e286be7c927f6d62ad1fed7af53e15ed19b435e"
+  },
+  {
+    "universe": "csi800",
+    "seed": 7,
+    "component": "base",
+    "file": "checkpoints/csi800/seed7/base.pt",
+    "bytes": 1414939,
+    "sha256": "91dd3425b898b4b3da50c04f2e87063f79533a1a2e77aad6f884afaf8a3b1223"
+  },
+  {
+    "universe": "csi800",
+    "seed": 7,
+    "component": "dense",
+    "file": "checkpoints/csi800/seed7/dense.pt",
+    "bytes": 1571549,
+    "sha256": "4ef1ab209b535a41dc27c927773111d59e59a15e7a2ceba7cfab2a9dba16c95e"
+  },
+  {
+    "universe": "csi800",
+    "seed": 7,
+    "component": "full",
+    "file": "checkpoints/csi800/seed7/full.pt",
+    "bytes": 1646215,
+    "sha256": "0577be50802c7bb99367a2e8222eb84f6a7b38f824602071b33f7e250a581156"
+  },
+  {
+    "universe": "csi800",
+    "seed": 8,
+    "component": "master",
+    "file": "checkpoints/csi800/seed8/master.pt",
+    "bytes": 3214817,
+    "sha256": "0502103639ce9fa2a19c7326b8b3405892a38ce2f81f0a5eb6b8255d6d5ea902"
+  },
+  {
+    "universe": "csi800",
+    "seed": 8,
+    "component": "base",
+    "file": "checkpoints/csi800/seed8/base.pt",
+    "bytes": 1414939,
+    "sha256": "dd15443733950408239effad4e98bde8f23ec0071995e4afb199e1e0a4857e33"
+  },
+  {
+    "universe": "csi800",
+    "seed": 8,
+    "component": "dense",
+    "file": "checkpoints/csi800/seed8/dense.pt",
+    "bytes": 1571549,
+    "sha256": "756494b7990dab5756d10826e043928d225f3f23336252caa9cc75c621b81e11"
+  },
+  {
+    "universe": "csi800",
+    "seed": 8,
+    "component": "full",
+    "file": "checkpoints/csi800/seed8/full.pt",
+    "bytes": 1646215,
+    "sha256": "b27185e24772125df5bb072c7e9c2afecff71b3b0db38104f9e593a1839e4cda"
+  },
+  {
+    "universe": "csi800",
+    "seed": 9,
+    "component": "master",
+    "file": "checkpoints/csi800/seed9/master.pt",
+    "bytes": 3214817,
+    "sha256": "4cfabaa0840f3fb97b1189c00550385e5537753863c1fc93e1deb7aa11e60a34"
+  },
+  {
+    "universe": "csi800",
+    "seed": 9,
+    "component": "base",
+    "file": "checkpoints/csi800/seed9/base.pt",
+    "bytes": 1414939,
+    "sha256": "407d2e250121bfb9e365a4689d8018d5736c637bcddb4574d56cd4eda499173e"
+  },
+  {
+    "universe": "csi800",
+    "seed": 9,
+    "component": "dense",
+    "file": "checkpoints/csi800/seed9/dense.pt",
+    "bytes": 1571549,
+    "sha256": "e4f18086cbfd7a8d3d1f95214bcdfb6a7028c5158a0b95701950bf99f31f6f68"
+  },
+  {
+    "universe": "csi800",
+    "seed": 9,
+    "component": "full",
+    "file": "checkpoints/csi800/seed9/full.pt",
+    "bytes": 1646215,
+    "sha256": "6fc6bc95f6409f1516d5df9c440187c0565d341d6fc7ac9a4bfdc67ec096e1a0"
+  }
+]

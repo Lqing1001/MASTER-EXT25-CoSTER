@@ -1,0 +1,14 @@
+{
+  "baseline_parity": true,
+  "fixed_random_permutation_invariance": true,
+  "HAC_statsmodels_parity": true,
+  "Holm_statsmodels_parity": true,
+  "portfolio_synthetic_parity": true,
+  "selector_smoke_modes": [
+    "last",
+    "fixed_random",
+    "top2",
+    "softmax"
+  ],
+  "base_sparse_full_first_run": true
+}
