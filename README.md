@@ -14,8 +14,7 @@ MASTER-EXT25 extends Chinese A-share stock-ranking evaluation through 2025. CoST
 | `data_tools/` | Data preparation, features and validation |
 | `experiments/` | Baselines, ablations and controlled experiments |
 | `evaluation/`, `investment/` | Predictive and portfolio evaluation |
-| `reference/`, `figures/` | Experimental results and figures |
-| `paper/` | Manuscript and LaTeX sources |
+| `reference/` | Experimental results |
 | `third_party/` | External modules and license notices |
 
 ## Quick start
