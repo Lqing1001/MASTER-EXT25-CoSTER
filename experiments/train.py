@@ -4,7 +4,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 def main():
  p=argparse.ArgumentParser();p.add_argument('--dataset-root',type=Path,required=True);p.add_argument('--output-root',type=Path,default=ROOT/'runs/coster');p.add_argument('--checkpoint-root',type=Path,help='Published checkpoints root: use each frozen encoder for matched training')
- p.add_argument('--universes',nargs='+',choices=['csi300','csi800'],default=['csi300','csi800']);p.add_argument('--seeds',nargs='+',type=int,default=[0,1,2]);p.add_argument('--include-baselines',action='store_true');p.add_argument('--dry-run',action='store_true')
+ p.add_argument('--universes',nargs='+',choices=['csi300','csi800'],default=['csi300','csi800']);p.add_argument('--seeds',nargs='+',type=int,default=list(range(10)));p.add_argument('--include-baselines',action='store_true');p.add_argument('--dry-run',action='store_true')
  a=p.parse_args();env=os.environ.copy();env['MASTER_EXT_DATASET_ROOT']=str(a.dataset_root.resolve())
  def run(args):
   cmd=[sys.executable]+list(map(str,args));print(subprocess.list2cmdline(cmd),flush=True)
