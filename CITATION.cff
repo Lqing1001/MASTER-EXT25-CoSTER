@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use this software or benchmark, please cite the associated CoSTER manuscript."
+title: "MASTER-EXT25 and CoSTER: Data-Driven Investment Management in the Chinese A-Share Market"
+type: software
+authors:
+  - family-names: Liu
+    given-names: Qingqing
+  - family-names: Rao
+    given-names: Hong
+  - family-names: Dong
+    given-names: Xiaorui
+license: MIT
+version: 1.1.0
+repository-code: "https://github.com/Lqing1001/MASTER-EXT25-CoSTER/"

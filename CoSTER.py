@@ -1,8 +1,8 @@
 """CoSTER: continuous and sparse temporal expert ranker (standalone source).
 
 独立文件：只需 Python 3.10+、NumPy、PyTorch（论文环境 PyTorch 2.8）。
-时序排序器含8个可学习位置向量。
-检查点文件名与加载接口保持一致。
+版本：2026-10-01 最终CoSTER；时序排序器含8个可学习位置向量。
+旧权重文件名中的 no_vq、ta_deformable 等名称保留，以兼容已有实验。
 包含 MASTER、连续编码器、混合排序器、时序残差、Top-1残差、训练与推断。
 不包含 CSMAR 原始数据、数据构建工具、已训练权重和组合回测。
 

@@ -9,3 +9,5 @@ joblib==1.5.2
 threadpoolctl==3.6.0
 lightgbm==4.6.0
 einops==0.8.1
+
+matplotlib>=3.9,<4
