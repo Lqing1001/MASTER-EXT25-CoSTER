@@ -18,7 +18,14 @@
   "seeds": [
     0,
     1,
-    2
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
   ],
   "baseline_seed": 0,
   "input_shape": [
@@ -43,9 +50,13 @@
   "k_selection": "CSI300 seed0 full CoSTER validation V=(IC+RankIC)/2; same k applied to both universes and all seeds",
   "continuous_weight": 0.5,
   "bootstrap": {
-    "block": 20,
+    "block_lengths": [
+      10,
+      20,
+      40
+    ],
     "replicates": 5000,
-    "seed": 20261001
+    "seed": 20261110
   },
   "cost_bps": [
     0,
@@ -53,5 +64,17 @@
     10,
     20,
     30
+  ],
+  "manuscript": "2026-11-15 manuscript_v2.pdf",
+  "newey_west_lags": [
+    5,
+    10,
+    20
+  ],
+  "primary_lag": 10,
+  "holm_family_size": 4,
+  "benchmark_codes": [
+    "H00300",
+    "H00906"
   ]
 }
